@@ -3,551 +3,360 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vishal Banquet Hall - Your Perfect Celebration Starts Here</title>
+    <title>Vishal Banquet Hall - Bodh Gaya</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" xintegrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        /* Apply Inter font family to the body */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8f8f8; /* Light background for the whole page */
+            background-color: #f0f4f8; /* A softer background */
+            color: #2d3748; /* Darker text for better contrast */
         }
-        /* Custom scrollbar for better aesthetics */
-        ::-webkit-scrollbar {
-            width: 8px;
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 1rem;
         }
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 10px;
+        .section-title {
+            font-size: 2.5rem; /* text-5xl */
+            font-weight: 800; /* font-extrabold */
+            color: #1a202c; /* Even darker title */
+            margin-bottom: 2rem; /* mb-8 */
+            text-align: center;
+            position: relative;
+            padding-bottom: 0.5rem;
         }
-        ::-webkit-scrollbar-thumb {
-            background: #a8a8a8;
-            border-radius: 10px;
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: #4c51bf; /* Indigo accent */
+            border-radius: 9999px;
         }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #888;
+        .card {
+            background-color: #ffffff;
+            border-radius: 1rem; /* rounded-2xl */
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Stronger shadow */
+            padding: 2.5rem; /* More padding */
+            margin-bottom: 2.5rem; /* mb-10 */
+        }
+        .btn {
+            display: inline-block;
+            background-color: #4c51bf; /* Indigo for primary actions */
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 0.75rem; /* rounded-xl */
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .btn:hover {
+            background-color: #5a64d3; /* Lighter indigo on hover */
+            transform: translateY(-2px);
+        }
+        .social-icon {
+            font-size: 2rem; /* Larger icons */
+            color: #4c51bf; /* Consistent with primary color */
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .social-icon:hover {
+            color: #667eea; /* Lighter indigo on hover */
+            transform: scale(1.2);
+        }
+        iframe {
+            border-radius: 1rem; /* rounded-2xl */
+        }
+
+        /* Hero Section Specific Styling */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://placehold.co/1200x500/3498db/ffffff?text=Grand+Banquet+Hall') no-repeat center center/cover;
+            min-height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
         }
     </style>
 </head>
-<body class="text-gray-800">
+<body class="antialiased">
 
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v22.0"></script>
-    <header class="bg-white shadow-lg py-4 px-6 md:px-12 sticky top-0 z-50 rounded-b-lg">
-        <nav class="container mx-auto flex flex-wrap justify-between items-center">
-            <a href="#home" class="text-3xl font-bold text-indigo-700 tracking-tight">
-                Vishal <span class="text-gray-600">Banquet Hall</span>
-            </a>
-
-            <button id="menu-toggle" class="md:hidden text-gray-700 hover:text-indigo-600 focus:outline-none focus:text-indigo-600">
-                <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
-
-            <div id="main-menu" class="hidden w-full md:flex md:w-auto md:flex-row md:space-x-6 mt-4 md:mt-0 items-center">
-                <a href="#home" class="block text-lg font-medium text-gray-700 hover:text-indigo-600 transition duration-300 py-2 md:py-0">Home</a>
-                <a href="#about" class="block text-lg font-medium text-gray-700 hover:text-indigo-600 transition duration-300 py-2 md:py-0">About Us</a>
-                <a href="#services" class="block text-lg font-medium text-gray-700 hover:text-indigo-600 transition duration-300 py-2 md:py-0">Services</a>
-                <a href="#gallery" class="block text-lg font-medium text-gray-700 hover:text-indigo-600 transition duration-300 py-2 md:py-0">Gallery</a>
-                <a href="#booking" class="block text-lg font-medium text-gray-700 hover:text-indigo-600 transition duration-300 py-2 md:py-0">Availability</a>
-                <a href="#contact" class="block text-lg font-medium text-gray-700 hover:text-indigo-600 transition duration-300 py-2 md:py-0">Contact Us</a>
-                <a href="https://agent.jotform.com/01970c6b937b7a6ea6a852e59a1cbf652524" target="_blank" class="block text-lg font-medium text-indigo-700 hover:text-purple-600 transition duration-300 py-2 md:py-0 px-4 rounded-full bg-indigo-100 hover:bg-indigo-200">Quick Inquiry</a>
-            </div>
-        </nav>
+    <!-- Top Call to Action / Booking -->
+    <header class="bg-indigo-800 py-4 text-center shadow-lg">
+        <a href="https://form.jotform.com/251493884642063" target="_blank" class="text-white text-xl font-semibold tracking-wide hover:underline px-4 py-2 rounded-lg transition-colors duration-300">
+            Click Here to Request a Quote & Book Your Event Today!
+        </a>
     </header>
 
-    <script>
-        // JavaScript for mobile menu toggle functionality
-        document.getElementById('menu-toggle').addEventListener('click', function() {
-            var menu = document.getElementById('main-menu');
-            if (menu.classList.contains('hidden')) {
-                menu.classList.remove('hidden');
-                menu.classList.add('flex', 'flex-col'); // Make links stack vertically when menu is open
-            } else {
-                menu.classList.remove('flex', 'flex-col');
-                menu.classList.add('hidden');
-            }
-        });
-    </script>
-
-    <div class="bg-purple-700 text-white text-center py-3 shadow-md">
-        <p class="text-lg font-semibold">
-            Need immediate assistance? <a href="https://agent.jotform.com/01970c6b937b7a6ea6a852e59a1cbf652524" target="_blank" class="underline hover:text-purple-200 transition duration-300">Click here for Direct Inquiry!</a>
-        </p>
+    <!-- Map Embed -->
+    <div class="w-full">
+        <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=vishal%20banquet%20hall%20Gaya-Dobhi%20Rd,%20Musatpura,%20Bodh%20Gaya,%20Bihar%20823004+(Vishal%20banquet%20hall%20)&amp;t=k&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+            <a href="https://www.gps.ie/collections/sports-gps/">Football GPS</a>
+        </iframe>
     </div>
 
-    <section id="home" class="relative bg-gradient-to-r from-indigo-700 to-purple-600 min-h-[70vh] py-20 flex items-center justify-center text-white overflow-hidden rounded-b-xl shadow-xl">
-        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://live.staticflickr.com/65535/54545876399_c473c8f510.jpg');"></div>
-        <div class="absolute inset-0 bg-black opacity-60"></div>
+    <!-- Directions Button below Map -->
+    <div class="text-center mt-6 mb-10">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=24.7191958,84.9683633" target="_blank" class="btn text-xl font-semibold bg-green-600 hover:bg-green-700">
+            Get Directions from Your Location
+        </a>
+    </div>
 
-        <div class="relative z-10 text-center p-8 max-w-4xl mx-auto">
-            <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6 animate-fade-in-down">
-                Your Perfect Celebration Starts Here
-            </h1>
-            <p class="text-xl md:text-2xl mb-10 opacity-90 animate-fade-in-up">
-                Creating Unforgettable Memories at Vishal Banquet Hall, Bodh Gaya.
-            </p>
-            <a href="https://form.jotform.com/251425170005443" target="_blank" class="inline-block bg-white text-indigo-700 hover:bg-indigo-100 px-10 py-4 rounded-full text-xl font-semibold shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
-                Book an Appointment
-            </a>
-        </div>
-    </section>
+    <div class="container bg-gray-50 p-8 rounded-2xl shadow-xl my-10">
 
-    <section class="py-16 bg-white rounded-xl shadow-lg mx-auto max-w-7xl mt-12 px-6 md:px-12">
-        <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold text-indigo-700 mb-6">Welcome to Vishal Banquet Hall</h2>
-            <p class="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
-                Nestled in the heart of Bodh Gaya, Vishal Banquet Hall offers a luxurious and versatile space for all your special occasions. From grand weddings to intimate gatherings and corporate events, our elegant ambiance and impeccable service ensure every moment is memorable. Experience unparalleled hospitality and create cherished memories with us.
-            </p>
-        </div>
-    </section>
-
-    <section id="services-preview" class="py-16 bg-gray-50 rounded-xl shadow-lg mx-auto max-w-7xl mt-12 px-6 md:px-12">
-        <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold text-indigo-700 mb-12">Events We Host</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="mx-auto mb-6 w-24 h-24 rounded-full flex items-center justify-center bg-purple-200 text-purple-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2c-3.31 0-6 2.69-6 6c0 2.22 1.21 4.16 3 5.2V17H7v3h4v-2h2v2h4v-3h-2v-3.8c1.79-1.04 3-2.98 3-5.2c0-3.31-2.69-6-6-6m0 4c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2"/></svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Weddings & Receptions</h3>
-                    <p class="text-gray-600">Celebrate your big day in style with our exquisite wedding arrangements and spacious halls.</p>
-                </div>
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="mx-auto mb-6 w-24 h-24 rounded-full flex items-center justify-center bg-blue-200 text-blue-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24"><path fill="currentColor" d="M19 2a3 3 0 0 1 3 3v14a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3zm0 2h-2v2h2zm0 4h-2v2h2zm0 4h-2v2h2zm0 4h-2v2h2zM5 4h2v2H5zm0 4h2v2H5zm0 4h2v2H5zm0 4h2v2H5zm4-12h6v2H9zm0 4h6v2H9zm0 4h6v2H9zm0 4h6v2H9z"/></svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Birthday & Anniversary Parties</h3>
-                    <p class="text-gray-600">Make every milestone special with our customizable party themes and joyful ambiance.</p>
-                </div>
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="mx-auto mb-6 w-24 h-24 rounded-full flex items-center justify-center bg-pink-200 text-pink-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24"><path fill="currentColor" d="M16 11V3H8v8H2v10h20V11zm-6-6h4v6h-4zm-6 8h4v6H4zm16 6h-4v-6h4z"/></svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Corporate Events</h3>
-                    <p class="text-gray-600">Host successful conferences, seminars, and product launches with our modern facilities.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-16 bg-white rounded-xl shadow-lg mx-auto max-w-7xl mt-12 px-6 md:px-12">
-        <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold text-indigo-700 mb-12">What Our Clients Say</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div class="bg-gray-50 p-8 rounded-xl shadow-md border-l-4 border-indigo-500">
-                    <p class="text-lg italic text-gray-700 mb-4">"Vishal Banquet Hall made our wedding day absolutely perfect! The staff was incredibly supportive, and the venue looked stunning."</p>
-                    <p class="font-semibold text-gray-800">- Priya Sharma</p>
-                </div>
-                <div class="bg-gray-50 p-8 rounded-xl shadow-md border-l-4 border-purple-500">
-                    <p class="text-lg italic text-gray-700 mb-4">"Excellent service and a beautiful space for our corporate event. Highly recommend for any professional gathering."</p>
-                    <p class="font-semibold text-gray-800">- Rajesh Kumar, CEO TechSolutions</p>
-                </div>
-            </div>
-            <div class="mt-12 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-                <a href="https://forms.gle/Dc7zt6C6AA4HTupF7" target="_blank" class="inline-block bg-indigo-600 text-white hover:bg-indigo-700 px-8 py-3 rounded-full text-lg font-semibold shadow-md transition duration-300">
-                    Leave a Google Review
-                </a>
-                <a href="https://form.jotform.com/251443928257059" target="_blank" class="inline-block bg-purple-600 text-white hover:bg-purple-700 px-8 py-3 rounded-full text-lg font-semibold shadow-md transition duration-300">
-                    Submit a Review
+        <!-- Hero Section -->
+        <section class="hero-section rounded-2xl mb-10 shadow-lg">
+            <div class="text-center px-4">
+                <h1 class="text-6xl font-extrabold mb-4 leading-tight">Vishal Banquet Hall</h1>
+                <p class="text-2xl opacity-90 max-w-2xl mx-auto">Where Unforgettable Moments Begin in Bodh Gaya</p>
+                <a href="https://form.jotform.com/251493884642063" target="_blank" class="btn mt-8 bg-pink-600 hover:bg-pink-700">
+                    Plan Your Event
                 </a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="about" class="py-16 bg-gray-50 rounded-xl shadow-lg mx-auto max-w-7xl mt-12 px-6 md:px-12">
-        <div class="container mx-auto">
-            <h2 class="text-4xl font-bold text-indigo-700 text-center mb-12">About Us</h2>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="lg:order-2">
-                    <img src="https://live.staticflickr.com/65535/54545876399_c473c8f510.jpg" alt="Our Story Image" class="rounded-xl shadow-lg w-full h-auto object-cover">
-                </div>
-                <div class="lg:order-1">
-                    <h3 class="text-3xl font-semibold text-gray-800 mb-6">Our Story & Philosophy</h3>
-                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                        Vishal Banquet Hall was founded with a vision to provide a premier event space in Bodh Gaya, combining elegant design with unparalleled service. Since our establishment, we have been dedicated to making every event a resounding success, understanding that each celebration is unique and deserves meticulous attention.
-                    </p>
-                    <p class="text-lg text-gray-700 leading-relaxed">
-                        Our philosophy revolves around customer satisfaction, attention to detail, and creating a seamless experience for our clients. We believe in building lasting relationships by exceeding expectations and ensuring every guest leaves with cherished memories.
-                    </p>
-                </div>
-            </div>
-            <div class="mt-12">
-                <h3 class="text-3xl font-semibold text-gray-800 text-center mb-8">Why Choose Vishal Banquet Hall?</h3>
-                <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-lg text-gray-700">
-                    <li class="flex items-start">
-                        <span class="text-indigo-600 text-2xl mr-3">✓</span>
-                        <span>Spacious and Elegant Hall for all event sizes.</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-indigo-600 text-2xl mr-3">✓</span>
-                        <span>Modern Amenities & State-of-the-art Sound System.</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-indigo-600 text-2xl mr-3">✓</span>
-                        <span>Experienced and Dedicated Event Staff.</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-indigo-600 text-2xl mr-3">✓</span>
-                        <span>Customizable Packages to fit your unique needs.</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-indigo-600 text-2xl mr-3">✓</span>
-                        <span>Prime Location in Bodh Gaya with ample parking.</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-indigo-600 text-2xl mr-3">✓</span>
-                        <span>Flexible Decor and Catering Partnerships.</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="services" class="py-16 bg-white rounded-xl shadow-lg mx-auto max-w-7xl mt-12 px-6 md:px-12">
-        <div class="container mx-auto">
-            <h2 class="text-4xl font-bold text-indigo-700 text-center mb-12">Our Services & Amenities</h2>
-
-            <div class="flex flex-col lg:flex-row items-center gap-10 mb-16">
-                <div class="lg:w-1/2">
-                    <img src="https://live.staticflickr.com/65535/54545876399_c473c8f510.jpg" alt="Wedding Setup" class="rounded-xl shadow-lg w-full h-auto object-cover">
-                </div>
-                <div class="lg:w-1/2">
-                    <h3 class="text-3xl font-semibold text-gray-800 mb-4">Weddings & Receptions</h3>
-                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
-                        Your wedding day is a once-in-a-lifetime event, and at Vishal Banquet Hall, we are dedicated to making it absolutely perfect. Our spacious and elegantly designed hall provides the ideal backdrop for both grand ceremonies and intimate receptions. We offer flexible seating arrangements, stunning decor options, and work with trusted catering partners to ensure a culinary experience that delights your guests.
-                    </p>
-                    <ul class="list-disc list-inside text-gray-700 text-lg">
-                        <li>Customizable decor themes</li>
-                        <li>Spacious dance floor</li>
-                        <li>Dedicated bridal changing rooms</li>
-                        <li>Assistance with vendor coordination</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="flex flex-col lg:flex-row-reverse items-center gap-10 mb-16">
-                <div class="lg:w-1/2">
-                    <img src="https://live.staticflickr.com/65535/54545876399_c473c8f510.jpg" alt="Birthday Party" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-300">
-                </div>
-                <div class="lg:w-1/2">
-                    <h3 class="text-3xl font-semibold text-gray-800 mb-4">Birthday & Anniversary Parties</h3>
-                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
-                        Celebrate life's milestones with joy and ease at Vishal Banquet Hall. Whether it's a vibrant birthday bash or a heartfelt anniversary celebration, our team helps you create a personalized event. We offer various themes, entertainment suggestions, and can assist with cake arrangements, ensuring a fun and memorable experience for all ages.
-                    </p>
-                    <ul class="list-disc list-inside text-gray-700 text-lg">
-                        <li>Themed party decorations</li>
-                        <li>Sound system for music and announcements</li>
-                        <li>Flexible seating and dining layouts</li>
-                        <li>Kids' friendly arrangements (on request)</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="flex flex-col lg:flex-row items-center gap-10 mb-16">
-                <div class="lg:w-1/2">
-                    <img src="https://live.staticflickr.com/65535/54545876399_c473c8f510.jpg" alt="Corporate Event" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-300">
-                </div>
-                <div class="lg:w-1/2">
-                    <h3 class="text-3xl font-semibold text-gray-800 mb-4">Corporate Events</h3>
-                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
-                        For your business needs, Vishal Banquet Hall provides a professional and conducive environment. Our venue is equipped to host conferences, seminars, product launches, and team meetings. We offer high-speed internet, modern audiovisual equipment, and versatile setups to ensure your corporate event runs smoothly and effectively.
-                    </p>
-                    <ul class="list-disc list-inside text-gray-700 text-lg">
-                        <li>High-speed Wi-Fi connectivity</li>
-                        <li>Projector and large screen</li>
-                        <li>Microphone and sound system</li>
-                        <li>Breakout areas (if required)</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="mt-12">
-                <h3 class="text-3xl font-semibold text-gray-800 text-center mb-8">General Amenities</h3>
-                <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-lg text-gray-700">
-                    <li class="flex items-start">
-                        <span class="text-green-600 text-2xl mr-3">✓</span>
-                        <span>Fully Air-Conditioned Hall</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-green-600 text-2xl mr-3">✓</span>
-                        <span>High-Quality Sound System</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-green-600 text-2xl mr-3">✓</span>
-                        <span>Dynamic Lighting Options</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-green-600 text-2xl mr-3">✓</span>
-                        <span>Projector & Large Screen Facilities</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-green-600 text-2xl mr-3">✓</span>
-                        <span>Ample Parking Space</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-green-600 text-2xl mr-3">✓</span>
-                        <span>Separate Changing Rooms</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-green-600 text-2xl mr-3">✓</span>
-                        <span>Dedicated Event Coordinator Support</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-green-600 text-2xl mr-3">✓</span>
-                        <span>Flexible Catering Services (in-house or tie-ups)</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-green-600 text-2xl mr-3">✓</span>
-                        <span>24/7 Power Backup</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="gallery" class="py-16 bg-gray-50 rounded-xl shadow-lg mx-auto max-w-7xl mt-12 px-6 md:px-12">
-        <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold text-indigo-700 mb-12">Our Gallery</h2>
-            <p class="text-lg text-gray-700 mb-8">Explore our beautiful banquet hall set up for various events.</p>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="relative group rounded-xl overflow-hidden shadow-lg">
-                    <img src="https://live.staticflickr.com/65535/54545876399_c473c8f510.jpg" alt="Wedding Setup" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-300">
-                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <p class="text-white text-xl font-semibold">Wedding Decor</p>
-                    </div>
-                </div>
-                <div class="relative group rounded-xl overflow-hidden shadow-lg">
-                    <img src="https://live.staticflickr.com/65535/54545876399_c473c8f510.jpg" alt="Birthday Party" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-300">
-                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <p class="text-white text-xl font-semibold">Birthday Celebration</p>
-                    </div>
-                </div>
-                <div class="relative group rounded-xl overflow-hidden shadow-lg">
-                    <img src="https://live.staticflickr.com/65535/54545876399_c473c8f510.jpg" alt="Corporate Event" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-300">
-                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <p class="text-white text-xl font-semibold">Corporate Setup</p>
-                    </div>
-                </div>
-                <div class="relative group rounded-xl overflow-hidden shadow-lg">
-                    <img src="https://live.staticflickr.com/65535/54545876399_c473c8f510.jpg" alt="Hall Interior" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-300">
-                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <p class="text-white text-xl font-semibold">Hall Interior View</p>
-                    </div>
-                </div>
-                <div class="relative group rounded-xl overflow-hidden shadow-lg">
-                    <img src="https://live.staticflickr.com/65535/54545876399_c473c8f510.jpg" alt="Catering Display" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-300">
-                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <p class="text-white text-xl font-semibold">Catering Display</p>
-                    </div>
-                </div>
-                <div class="relative group rounded-xl overflow-hidden shadow-lg">
-                    <img src="https://live.staticflickr.com/65535/54545876399_c473c8f510.jpg" alt="Event in Progress" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-300">
-                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <p class="text-white text-xl font-semibold">Event in Progress</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="social-proof" class="py-16 bg-white rounded-xl shadow-lg mx-auto max-w-7xl mt-12 px-6 md:px-12">
-        <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold text-indigo-700 mb-12">Connect With Us & Our Community</h2>
-            <p class="text-lg text-gray-700 mb-8">See our latest events, inspirations, and behind-the-scenes moments on social media!</p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Our Facebook Feed</h3>
-                    <div class="h-80 w-full flex items-center justify-center bg-gray-100 text-gray-500 text-sm">
-                        <div class="fb-page"
-                            data-href="https://www.facebook.com/YOUR_ACTUAL_FACEBOOK_PAGE_URL"
-                            data-tabs="timeline"
-                            data-width=""
-                            data-height="320"
-                            data-small-header="false"
-                            data-adapt-container-width="true"
-                            data-hide-cover="false"
-                            data-show-facepile="false">
-                            <blockquote cite="https://www.facebook.com/YOUR_ACTUAL_FACEBOOK_PAGE_URL" class="fb-xfbml-parse-ignore">
-                                <a href="https://www.facebook.com/YOUR_ACTUAL_FACEBOOK_PAGE_URL">Vishal Banquet Hall</a>
-                            </blockquote>
-                        </div>
-                    </div>
-                    <a href="https://www.facebook.com/share/1BLptjfrcY/?mibextid=wwXIfr" target="_blank" class="mt-4 inline-block text-indigo-600 hover:underline">Visit our Facebook Page →</a>
-                </div>
-
-                <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200 flex flex-col items-center justify-center">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Our YouTube Gallery</h3>
-                    <div class="w-full h-80 flex items-center justify-center">
-                        <div class="elfsight-app-7f0332fa-8921-4e50-bad9-e79b920c2fa6" data-elfsight-app-lazy></div>
-                    </div>
-                    <p class="text-gray-600 mt-4 text-center">Watch videos of our beautiful venue and past events!</p>
-                    <a href="http://www.youtube.com/@VishalBanquetHall" target="_blank" class="inline-block bg-red-600 text-white hover:bg-red-700 px-6 py-2 rounded-full text-md font-semibold shadow-md transition duration-300 mt-4">
-                        Visit our YouTube Channel →
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="partnerships" class="py-16 bg-gray-50 rounded-xl shadow-lg mx-auto max-w-7xl mt-12 px-6 md:px-12">
-        <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold text-indigo-700 mb-12">Our Trusted Partners</h2>
-            <p class="text-lg text-gray-700 mb-8">We collaborate with the best local vendors to make your event truly special.</p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <img src="https://via.placeholder.com/100x100?text=Decor+Logo" alt="Partner Name Logo" class="mx-auto mb-6 h-24 w-24 object-contain rounded-full border border-gray-200">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">Dreamy Decors</h3>
-                    <p class="text-gray-600 mb-4">Expert decorators creating stunning ambiance for any occasion.</p>
-                    <a href="https://www.example.com/dreamydecors" target="_blank" class="inline-block bg-purple-600 text-white hover:bg-purple-700 px-6 py-2 rounded-full text-md font-semibold shadow-md transition duration-300">
-                        Visit Website
-                    </a>
-                </div>
-
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <img src="https://via.placeholder.com/100x100?text=Photo+Logo" alt="Partner Name Logo" class="mx-auto mb-6 h-24 w-24 object-contain rounded-full border border-gray-200">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">Lens & Lights Photography</h3>
-                    <p class="text-gray-600 mb-4">Capturing timeless memories with professional photography services.</p>
-                    <a href="https://www.example.com/lenslights" target="_blank" class="inline-block bg-purple-600 text-white hover:bg-purple-700 px-6 py-2 rounded-full text-md font-semibold shadow-md transition duration-300">
-                        Visit Website
-                    </a>
-                </div>
-
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <img src="https://via.placeholder.com/100x100?text=DJ+Logo" alt="Partner Name Logo" class="mx-auto mb-6 h-24 w-24 object-contain rounded-full border border-gray-200">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">Groove Gurus DJ</h3>
-                    <p class="text-gray-600 mb-4">Keeping the energy high with an amazing selection of music for all events.</p>
-                    <a href="https://www.example.com/groovegurus" target="_blank" class="inline-block bg-purple-600 text-white hover:bg-purple-700 px-6 py-2 rounded-full text-md font-semibold shadow-md transition duration-300">
-                        Visit Website
-                    </a>
-                </div>
-
-                </div>
-            <p class="text-gray-700 mt-12">Interested in becoming a Vishal Banquet Hall partner? <a href="#contact" class="text-indigo-600 hover:underline">Contact us!</a></p>
-        </div>
-    </section>
-
-    <section id="booking" class="py-16 bg-white rounded-xl shadow-lg mx-auto max-w-7xl mt-12 px-6 md:px-12">
-        <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold text-indigo-700 mb-12">Check Availability & Get a Quote</h2>
-            <p class="text-lg text-gray-700 mb-8 max-w-3xl mx-auto">
-                Planning your next event? Use the tools below to check our availability and receive a personalized quote tailored to your specific needs.
+        <!-- About Section -->
+        <section class="card">
+            <h2 class="section-title">About Vishal Banquet Hall</h2>
+            <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                Vishal Banquet Hall is Bodh Gaya's premier destination for hosting memorable events.
+                Strategically located on Gaya-Dobhi Rd in Musatpura, our modern and elegantly designed hall
+                provides the perfect backdrop for weddings, grand receptions, sophisticated corporate gatherings,
+                joyful birthday celebrations, and all types of special occasions. We pride ourselves on offering
+                impeccable service, state-of-the-art facilities, and a dedicated team committed to making your event
+                a seamless and extraordinary success.
             </p>
+            <p class="text-md text-gray-600">
+                Find us easily at <span class="font-semibold">Gaya-Dobhi Rd, Musatpura, Bodh Gaya, Bihar 823004</span>
+                (Coordinates: 24.7191958, 84.9683633). We look forward to welcoming you!
+            </p>
+        </section>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
-                <div class="bg-gray-50 p-8 rounded-xl shadow-md border border-gray-200 h-96 flex flex-col justify-center items-center text-gray-700">
-                    <h3 class="text-2xl font-semibold mb-4">Event Calendar Overview</h3>
-                    <p class="text-center mb-6">
-                        See what dates are available! For real-time updates and detailed availability, please use our inquiry form.
-                    </p>
-                    <div class="w-full h-48 bg-gray-200 rounded-md flex items-center justify-center text-gray-500">
-                        <iframe
-                            src="https://outlook.live.com/owa/calendar/00000000-0000-0000-0000-000000000000/ab1c8001-2355-4575-a31d-ae367714001e/cid-6CA6FD4CC915D04E/index.html"
-                            width="100%"
-                            height="100%"
-                            frameborder="0"
-                            scrolling="no"
-                        ></iframe>
-                    </div>
+        <!-- Services Section -->
+        <section class="card">
+            <h2 class="section-title">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+                <div class="p-6 bg-indigo-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <i class="fas fa-ring text-5xl text-indigo-700 mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2 text-gray-800">Weddings & Receptions</h3>
+                    <p class="text-gray-600">Elegant settings and comprehensive support for your special day.</p>
                 </div>
-
-                <div class="bg-gray-50 p-8 rounded-xl shadow-md border border-gray-200 flex flex-col justify-center items-center h-96">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Request a Personalized Quote</h3>
-                    <p class="text-lg text-gray-700 mb-6 text-center">
-                        Tell us about your event, and we'll get back to you with a detailed quote and availability.
-                    </p>
-                    <a href="https://form.jotform.com/251425170005443" target="_blank" class="inline-block bg-indigo-600 text-white hover:bg-indigo-700 px-10 py-4 rounded-full text-xl font-semibold shadow-lg transform hover:scale-105 transition duration-300 ease-in-out mb-4">
-                        Get a Custom Quote
-                    </a>
-                    <p class="text-sm text-gray-600">
-                        Or for a quick inquiry, use our <a href="https://agent.jotform.com/01970c6b937b7a6ea6a852e59a1cbf652524" target="_blank" class="text-indigo-600 hover:underline">Direct Inquiry Form</a>.
-                    </p>
+                <div class="p-6 bg-indigo-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <i class="fas fa-briefcase text-5xl text-indigo-700 mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2 text-gray-800">Corporate Events</h3>
+                    <p class="text-gray-600">Professional environment for conferences, seminars, and meetings.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="py-16 bg-white rounded-xl shadow-lg mx-auto max-w-7xl mt-12 px-6 md:px-12">
-        <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold text-indigo-700 mb-12">Contact Us</h2>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-                <div class="text-left">
-                    <h3 class="text-3xl font-semibold text-gray-800 mb-6">Get in Touch</h3>
-                    <p class="text-lg text-gray-700 mb-4">
-                        Have questions or ready to book your event? Reach out to us using the details below or fill out our appointment form.
-                    </p>
-                    <div class="mb-4">
-                        <p class="text-xl font-semibold text-gray-800">Mobile Numbers:</p>
-                        <p class="text-lg text-gray-700">
-                            <a href="tel:+919228105245" class="text-indigo-600 hover:underline">9228105245</a>,
-                            <a href="tel:+918000037656" class="text-indigo-600 hover:underline">8000037656</a>
-                        </p>
-                    </div>
-                    <div class="mb-4">
-                        <p class="text-xl font-semibold text-gray-800">Email ID:</p>
-                        <p class="text-lg text-gray-700">
-                            <a href="mailto:vishalhospital@hotmail.co.in" class="text-indigo-600 hover:underline">vishalhospital@hotmail.co.in</a>
-                        </p>
-                    </div>
-                    <div class="mb-6">
-                        <p class="text-xl font-semibold text-gray-800">Address:</p>
-                        <p class="text-lg text-gray-700">
-                            Vishal Banquet Hall, Gaya-Dobhi Rd, Musatpura, Bodh Gaya, Bihar 823004
-                        </p>
-                    </div>
-                    <a href="https://www.google.com/maps/dir/?api=1&destination=Vishal+Banquet+Hall,+Gaya-Dobhi+Rd,+Musatpura,+Bodh+Gaya,+Bihar+823004" target="_blank" class="inline-block bg-purple-600 text-white hover:bg-purple-700 px-8 py-3 rounded-full text-lg font-semibold shadow-md transition duration-300 mt-4">
-                        Get Directions
-                    </a>
-                    <a href="https://form.jotform.com/251425170005443" target="_blank" class="inline-block bg-indigo-600 text-white hover:bg-indigo-700 px-8 py-3 rounded-full text-lg font-semibold shadow-md transition duration-300 mt-4 ml-0 sm:ml-4">
-                        Book an Appointment
-                    </a>
+                <div class="p-6 bg-indigo-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <i class="fas fa-birthday-cake text-5xl text-indigo-700 mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2 text-gray-800">Birthday Parties</h3>
+                    <p class="text-gray-600">Joyful celebrations with customizable themes and delicious food.</p>
                 </div>
-
-                <div class="w-full h-96 rounded-xl overflow-hidden shadow-lg">
-                    <iframe
-                        width="100%"
-                        height="100%"
-                        frameborder="0"
-                        scrolling="no"
-                        marginheight="0"
-                        marginwidth="0"
-                        src="https://maps.google.com/maps?q=Vishal%20Banquet%20Hall,%20Gaya-Dobhi%20Rd,%20Musatpura,%20Bodh%20Gaya,%20Bihar%20823004&t=&z=14&ie=UTF8&iwloc=&output=embed"
-                        class="rounded-xl"
-                    ></iframe>
+                <div class="p-6 bg-indigo-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <i class="fas fa-glass-cheers text-5xl text-indigo-700 mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2 text-gray-800">Social Gatherings</h3>
+                    <p class="text-gray-600">Any special occasion, from anniversaries to family reunions.</p>
+                </div>
+                <div class="p-6 bg-indigo-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <i class="fas fa-utensils text-5xl text-indigo-700 mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2 text-gray-800">Catering Services</h3>
+                    <p class="text-gray-600">Exquisite culinary experiences tailored to your taste.</p>
+                </div>
+                <div class="p-6 bg-indigo-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <i class="fas fa-palette text-5xl text-indigo-700 mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2 text-gray-800">Event Decoration</h3>
+                    <p class="text-gray-600">Transforming spaces to match your vision and theme.</p>
                 </div>
             </div>
+        </section>
 
-            <div class="mt-12">
-                <h3 class="text-2xl font-semibold text-gray-800 mb-6">Follow Us</h3>
-                <div class="flex justify-center space-x-6">
-                    <a href="https://www.facebook.com/share/1BLptjfrcY/?mibextid=wwXIfr" target="_blank" class="text-gray-600 hover:text-indigo-600 transition duration-300 text-4xl" aria-label="Facebook">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95"/></svg>
-                    </a>
-                    <a href="https://flic.kr/ps/46h5vR" target="_blank" class="text-gray-600 hover:text-indigo-600 transition duration-300 text-4xl" aria-label="Flickr">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 4.5A7.5 7.5 0 0 0 4.5 12A7.5 7.5 0 0 0 12 19.5A7.5 7.5 0 0 0 19.5 12A7.5 7.5 0 0 0 12 4.5M12 6.5A5.5 5.5 0 0 1 17.5 12A5.5 5.5 0 0 1 12 17.5A5.5 5.5 0 0 1 6.5 12A5.5 5.5 0 0 1 12 6.5M10.5 8.5A2 2 0 0 0 8.5 10.5A2 2 0 0 0 10.5 12.5A2 2 0 0 0 12.5 10.5A2 2 0 0 0 10.5 8.5M15.5 11.5A2 2 0 0 0 13.5 13.5A2 2 0 0 0 15.5 15.5A2 2 0 0 0 17.5 13.5A2 2 0 0 0 15.5 11.5Z"/></svg>
-                    </a>
-                    <a href="https://www.instagram.com/vishalbanquethall?igsh=MTVtenQyMjB5b2c5dQ%3D%3D&utm_source=qr" target="_blank" class="text-gray-600 hover:text-indigo-600 transition duration-300 text-4xl" aria-label="Instagram">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4c0 3.2-2.6 5.8-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8C2 4.6 4.6 2 7.8 2m-.2 2A4.8 4.8 0 0 0 4.8 7.6v8.8c0 2.7 2.2 4.8 4.8 4.8h8.8c2.7 0 4.8-2.2 4.8-4.8V7.6c0-2.7-2.2-4.8-4.8-4.8zm7.5 3.7c-.8 0-1.5.7-1.5 1.5s.7 1.5 1.5 1.5s1.5-.7 1.5-1.5s-.7-1.5-1.5-1.5m-3.7 2.2c-3.3 0-6 2.7-6 6s2.7 6 6 6s6-2.7 6-6s-2.7-6-6-6m0 2c2.2 0 4 1.8 4 4s-1.8 4-4 4s-4-1.8-4-4s1.8-4 4-4"/></svg>
-                    </a>
-                    <a href="http://www.youtube.com/@VishalBanquetHall" target="_blank" class="text-gray-600 hover:text-indigo-600 transition duration-300 text-4xl" aria-label="YouTube">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12S6.48 2 12 2m0 2c-4.42 0-8 3.58-8 8s3.58 8 8 8s8-3.58 8-8s-3.58-8-8-8m4.5 7.5L10 15.75V8.25z"/></svg>
-                    </a>
+        <!-- Facilities/Amenities Section -->
+        <section class="card">
+            <h2 class="section-title">Our Facilities</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-lg text-gray-700">
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-expand-alt text-2xl text-green-600"></i>
+                    <span>Spacious Hall</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-snowflake text-2xl text-blue-600"></i>
+                    <span>Fully Air-Conditioned</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-car text-2xl text-gray-600"></i>
+                    <span>Ample Parking</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-volume-up text-2xl text-red-600"></i>
+                    <span>Advanced Sound System</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-wifi text-2xl text-purple-600"></i>
+                    <span>High-Speed Wi-Fi</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-chair text-2xl text-yellow-600"></i>
+                    <span>Elegant Seating Arrangements</span>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer class="bg-gray-800 text-white py-8 mt-12 rounded-t-lg">
-        <div class="container mx-auto text-center">
-            <p>© 2025 Vishal Banquet Hall. All rights reserved.</p>
-            <p class="mt-2 text-sm">Designed with ❤️ for your special moments.</p>
-        </div>
+        <!-- Gallery Section - Flickr Embed -->
+        <section class="card">
+            <h2 class="section-title">Our Gallery</h2>
+            <div class="flex justify-center items-center flex-col">
+                <p class="text-lg text-gray-700 mb-6 text-center">Explore moments captured at Vishal Banquet Hall:</p>
+                <!-- Flickr Embed Code -->
+                <div class="w-full flex justify-center overflow-hidden rounded-xl shadow-lg">
+                    <a data-flickr-embed="true" data-header="true" data-footer="true" href="https://www.flickr.com/photos/202878976@N03" title="Vishal Banquet Hall Photos">
+                        <img src="https://live.staticflickr.com/65535/54606014869_80c636539c_c.jpg" width="1024" height="768" alt="Vishal Banquet Hall" class="rounded-xl">
+                    </a>
+                </div>
+                <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+                <p class="mt-6 text-gray-600 text-base text-center">
+                    <a href="https://www.flickr.com/photos/202878976@N03" target="_blank" class="text-blue-600 hover:underline font-medium">View more photos on Flickr</a>
+                </p>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="card">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <p class="italic text-gray-700 mb-4">"Vishal Banquet Hall provided an exceptional experience for our wedding reception. The staff was incredibly supportive, and the venue looked absolutely stunning!"</p>
+                    <p class="font-semibold text-gray-800">- R. Sharma, Happy Couple</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <p class="italic text-gray-700 mb-4">"We hosted our annual corporate conference here, and everything was perfectly managed. The facilities are top-notch, and the catering was superb."</p>
+                    <p class="font-semibold text-gray-800">- A. Kumar, Corporate Client</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Main Section (Simplified) -->
+        <section class="card">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-lg text-gray-700">
+                <div>
+                    <p class="mb-3"><span class="font-semibold text-gray-800">Mobile:</span> <a href="tel:+919228105245" class="text-blue-600 hover:underline">9228105245</a></p>
+                    <p class="mb-3"><span class="font-semibold text-gray-800">Email:</span> <a href="mailto:vishalhospital@hotmail.co.in" class="text-blue-600 hover:underline">vishalhospital@hotmail.co.in</a></p>
+                    <p class="mb-3"><span class="font-semibold text-gray-800">Official Website:</span> <a href="https://vishalbanquethall1.github.io/" target="_blank" class="text-blue-600 hover:underline">vishalbanquethall1.github.io</a></p>
+                </div>
+                <div>
+                    <!-- JSDL Link for Review -->
+                    <p class="mb-3"><span class="font-semibold text-gray-800">Scan to Review Us:</span> <a href="https://jsdl.in/RSL-PMD1748682945" target="_blank" class="text-blue-600 hover:underline">Leave a Review Here</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media Section -->
+        <section class="card">
+            <h2 class="section-title">Connect With Us</h2>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="https://www.facebook.com/share/1BLptjfrcY/?mibextid=wwXIfr" target="_blank" aria-label="Facebook" class="social-icon-wrapper">
+                    <i class="fab fa-facebook-f social-icon"></i>
+                </a>
+                <a href="https://www.instagram.com/vishalbanquethall?igsh=MTVtenQyMjB5b2c5dQ%3D%3D&utm_source=qr" target="_blank" aria-label="Instagram" class="social-icon-wrapper">
+                    <i class="fab fa-instagram social-icon"></i>
+                </a>
+                <a href="https://m.youtube.com/@VishalBanquetHall" target="_blank" aria-label="YouTube" class="social-icon-wrapper">
+                    <i class="fab fa-youtube social-icon"></i>
+                </a>
+                <a href="https://snapchat.com/t/wWMY5YJB" target="_blank" aria-label="Snapchat" class="social-icon-wrapper">
+                    <i class="fab fa-snapchat-ghost social-icon"></i>
+                </a>
+                <a href="https://x.com/vishalbanquet1?s=21" target="_blank" aria-label="X (Twitter)" class="social-icon-wrapper">
+                    <i class="fab fa-x-twitter social-icon"></i>
+                </a>
+                <a href="https://pin.it/6KuEqjBJj" target="_blank" aria-label="Pinterest" class="social-icon-wrapper">
+                    <i class="fab fa-pinterest-p social-icon"></i>
+                </a>
+                <a href="https://www.threads.com/@vishalbanquethall?invite=0" target="_blank" aria-label="Threads" class="social-icon-wrapper">
+                    <i class="fab fa-threads social-icon"></i>
+                </a>
+                <a href="https://www.tumblr.com/vishalbanquethall" target="_blank" aria-label="Tumblr" class="social-icon-wrapper">
+                    <i class="fab fa-tumblr social-icon"></i>
+                </a>
+                <a href="https://www.reddit.com/u/vishalbanquethall/s/x4JplWLcNv" target="_blank" aria-label="Reddit" class="social-icon-wrapper">
+                    <i class="fab fa-reddit-alien social-icon"></i>
+                </a>
+                <a href="https://discord.gg/puGxuz3C" target="_blank" aria-label="Discord" class="social-icon-wrapper">
+                    <i class="fab fa-discord social-icon"></i>
+                </a>
+                <!-- Missing icon for Explurger, Fanbase, Quora, Abillion - using default placeholder -->
+                <a href="https://explurger.com/pf/swfxkv9mkbqinbxgd" target="_blank" aria-label="Explurger" class="social-icon-wrapper">
+                    <img src="https://placehold.co/40x40/34D399/ffffff?text=Ex" alt="Explurger" class="rounded-full w-10 h-10">
+                </a>
+                <a href="https://fanbase.app.link/tT37bh4KOTb" target="_blank" aria-label="Fanbase 1" class="social-icon-wrapper">
+                     <img src="https://placehold.co/40x40/4a4a4a/ffffff?text=FB" alt="Fanbase" class="rounded-full w-10 h-10">
+                </a>
+                <a href="https://fanbase.app.link/1bSCRX6xpUb" target="_blank" aria-label="Fanbase 2" class="social-icon-wrapper">
+                     <img src="https://placehold.co/40x40/4a4a4a/ffffff?text=FB2" alt="Fanbase" class="rounded-full w-10 h-10">
+                </a>
+                <a href="https://vishalbanquethall.quora.com/" target="_blank" aria-label="Quora" class="social-icon-wrapper">
+                     <img src="https://placehold.co/40x40/AA2200/ffffff?text=QR" alt="Quora" class="rounded-full w-10 h-10">
+                </a>
+                <a href="https://i.abillion.com/cZf9ARakK4LbVhkF9" target="_blank" aria-label="Abillion" class="social-icon-wrapper">
+                     <img src="https://placehold.co/40x40/32CD32/ffffff?text=AB" alt="Abillion" class="rounded-full w-10 h-10">
+                </a>
+            </div>
+            <p class="mt-8 text-center text-gray-700 text-lg">Follow us on social media for updates and more!</p>
+        </section>
+
+        <!-- Additional Contact Information Section -->
+        <section class="card">
+            <h2 class="section-title">Additional Contact Information</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-lg text-gray-700">
+
+                <!-- Vishal Hospital (Rajkot) -->
+                <div>
+                    <h3 class="font-bold text-xl text-indigo-700 mb-3">Vishal Hospital (Rajkot)</h3>
+                    <p class="mb-2"><span class="font-semibold">Address:</span> Vishal Hospital, Kailashwadi Main Road, opposite Taluka Polish Choki, Junction Plot, Rajkot, Gujarat 360001</p>
+                    <p class="mb-2"><span class="font-semibold">Mobile:</span> <a href="tel:+919228105245" class="text-blue-600 hover:underline">9228105245</a></p>
+                    <p class="mb-2"><span class="font-semibold">Landline:</span> <a href="tel:02812450408" class="text-blue-600 hover:underline">0281-2450408</a></p>
+                    <p class="mb-2"><span class="font-semibold">Website:</span> <a href="https://vishalhospitalrajkot.github.io/" target="_blank" class="text-blue-600 hover:underline">vishalhospitalrajkot.github.io</a></p>
+                </div>
+
+                <!-- Vishal Banquet Hall (Bodh Gaya) -->
+                <div>
+                    <h3 class="font-bold text-xl text-indigo-700 mb-3">Vishal Banquet Hall (Bodh Gaya)</h3>
+                    <p class="mb-2"><span class="font-semibold">Address:</span> Vishal Banquet Hall, Gaya-Dobhi Rd, Musatpura, Bihar 823004</p>
+                    <p class="mb-2"><span class="font-semibold">Mobile:</span> <a href="tel:+919228105245" class="text-blue-600 hover:underline">9228105245</a></p>
+                    <p class="mb-2"><span class="font-semibold">Website:</span> <a href="https://vishalbanquethall1.github.io/" target="_blank" class="text-blue-600 hover:underline">vishalbanquethall1.github.io</a></p>
+                </div>
+
+                <!-- Vishal Hospital (Bodh Gaya) -->
+                <div>
+                    <h3 class="font-bold text-xl text-indigo-700 mb-3">Vishal Hospital (Bodh Gaya)</h3>
+                    <p class="mb-2"><span class="font-semibold">Address:</span> Vishal Hospital, Gaya-Dobhi Rd, Musatpura, Bihar 823004</p>
+                    <p class="mb-2"><span class="font-semibold">Mobile:</span> <a href="tel:+919228105245" class="text-blue-600 hover:underline">9228105245</a></p>
+                    <p class="mb-2"><span class="font-semibold">Website:</span> <a href="https://vishalhospitalrajkot.github.io/vishalhospitalbodhgaya/" target="_blank" class="text-blue-600 hover:underline">vishalhospitalrajkot.github.io/vishalhospitalbodhgaya</a></p>
+                </div>
+
+                <!-- Dr. Anoop Lal Sinha -->
+                <div>
+                    <h3 class="font-bold text-xl text-indigo-700 mb-3">Dr. Anoop Lal Sinha</h3>
+                    <p class="mb-2"><span class="font-semibold">Mobile:</span> <a href="tel:+919228105245" class="text-blue-600 hover:underline">9228105245</a></p>
+                    <p class="mb-2"><span class="font-semibold">Website:</span> <a href="https://vishalhospitalrajkot.github.io/Dr.AnoopLalSinha/" target="_blank" class="text-blue-600 hover:underline">vishalhospitalrajkot.github.io/Dr.AnoopLalSinha</a></p>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white text-center py-8 mt-10 rounded-t-2xl shadow-inner">
+        <p class="mb-2">&copy; 2024 Vishal Banquet Hall. All rights reserved.</p>
+        <p class="text-sm">Located at: Gaya-Dobhi Rd, Musatpura, Bodh Gaya, Bihar 823004</p>
     </footer>
 
-    <script src="https://static.elfsight.com/platform/platform.js" async></script>
 </body>
 </html>
