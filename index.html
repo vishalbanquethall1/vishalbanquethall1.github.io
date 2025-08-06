@@ -1,616 +1,515 @@
-<a href="https://github.com/vishalbanquethall1/vishalbanquethall1.github.io/blob/ffe25a14a1e2bceb09aa7f3d65273dc9522a8014/index.html">https://github.com/vishalbanquethall1/vishalbanquethall1.github.io/blob/ffe25a14a1e2bceb09aa7f3d65273dc9522a8014/index.html</a>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vishal Banquet Hall</title>
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all">
-<link href="css/font-awesome.css" rel="stylesheet">
-<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" property="" />
-<link href="css/owl.carousel.css" rel="stylesheet">
-<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen">
-<link rel="icon" href="images/icon.png">
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.js"></script>
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
-<script type="text/javascript">
-	jQuery(document).ready(function($) {
-		$(".scroll").click(function(event){		
-			event.preventDefault();
-			$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
-		});
-	});
-</script>
-<script defer src="js/jquery.flexslider.js"></script>
-<script type="text/javascript">
-	$(window).load(function(){
-		$('.flexslider').flexslider({
-			animation: "slide",
-			start: function(slider){
-				$('body').removeClass('loading');
-			}
-		});
-	});
-</script>
-<script src="js/jquery.chocolat.js"></script>
-<script type="text/javascript">
-	$(function() {
-		$('.gallery-grid a').Chocolat();
-	});
-</script>
-<script src="js/owl.carousel.js"></script>
-<script>
-	$(document).ready(function() {
-		$("#owl-demo").owlCarousel ({
-			items : 4,
-			lazyLoad : true,
-			autoPlay : true,
-			navigation : true,
-			navigationText :  false,
-			pagination : false,
-		});
-	});
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishal Banquet Hall - Premier Wedding & Event Venue in Bodh Gaya</title>
+    <meta name="description" content="Vishal Banquet Hall is Bodh Gaya's premier venue for weddings, corporate events, and celebrations. Our modern facilities rival top hotel venues, ideal for guests and events. Located on Gaya-Dobhi Rd, Musatpura, we offer impeccable service, modern facilities, and dedicated event planning. Book your unforgettable event with us!">
+    <meta name="keywords" content="Vishal Banquet Hall, Bodh Gaya, wedding venue, event hall, corporate events, birthday parties, social gatherings, reception hall, banquet hall Bodh Gaya, best banquet hall, event space Bihar, hotel banquet hall, hotel venue Bodh Gaya, event hotel, banquet hall Gaya, event venue Gaya">
+    <meta property="og:title" content="Vishal Banquet Hall - Premier Wedding & Event Venue in Bodh Gaya">
+    <meta property="og:description" content="Vishal Banquet Hall is Bodh Gaya's premier venue for weddings, corporate events, and celebrations. Located on Gaya-Dobhi Rd, Musatpura, we offer impeccable service, modern facilities, and dedicated event planning.">
+    <meta property="og:image" content="https://vishalbanquethall1.github.io/images/hero-bg.jpg">
+    <meta property="og:url" content="https://vishalbanquethall1.github.io/">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@vishalbanquet1">
+    <meta name="twitter:title" content="Vishal Banquet Hall - Premier Wedding & Event Venue in Bodh Gaya">
+    <meta name="twitter:description" content="Vishal Banquet Hall is Bodh Gaya's premier venue for weddings, corporate events, and celebrations. Located on Gaya-Dobhi Rd, Musatpura, we offer impeccable service, modern facilities, and dedicated event planning.">
+    <meta name="twitter:image" content="https://vishalbanquethall1.github.io/images/hero-bg.jpg">
+    <link rel="canonical" href="https://vishalbanquethall1.github.io/">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Custom styles to enhance the Tailwind defaults and ensure consistent design */
+        body {
+            font-family: 'Inter', sans-serif; /* Apply Inter font to the entire body */
+            background-color: #f0f4f8; /* A softer, light gray background */
+            color: #2d3748; /* Darker text for better readability and contrast */
+        }
+        .container {
+            max-width: 1200px; /* Max width for content to keep it readable on large screens */
+            margin: auto; /* Center the container */
+            padding: 1rem; /* Default padding for all sides */
+        }
+        .section-title {
+            font-size: 2.5rem; /* Large font size for section titles */
+            font-weight: 800; /* Extra bold for emphasis */
+            color: #1a202c; /* Very dark color for strong contrast */
+            margin-bottom: 2rem; /* Space below the title */
+            text-align: center; /* Center align the title */
+            position: relative; /* Needed for the pseudo-element underline */
+            padding-bottom: 0.5rem; /* Space for the underline */
+        }
+        .section-title::after {
+            content: ''; /* Create an underline effect using a pseudo-element */
+            position: absolute;
+            bottom: 0;
+            left: 50%; /* Center the underline */
+            transform: translateX(-50%); /* Adjust for perfect centering */
+            width: 80px; /* Fixed width for the underline */
+            height: 4px; /* Thickness of the underline */
+            background-color: #4c51bf; /* Indigo accent color */
+            border-radius: 9999px; /* Fully rounded corners for the underline */
+        }
+        .card {
+            background-color: #ffffff; /* White background for content cards */
+            border-radius: 1rem; /* Rounded corners for the cards */
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Stronger shadow for depth */
+            padding: 2.5rem; /* Generous padding inside the cards */
+            margin-bottom: 2.5rem; /* Space between cards */
+        }
+        .btn {
+            display: inline-block; /* Allow padding and margin */
+            background-color: #4c51bf; /* Indigo for primary buttons */
+            color: white; /* White text on buttons */
+            padding: 1rem 2.5rem; /* Padding for button size */
+            border-radius: 0.75rem; /* Rounded corners for buttons */
+            text-decoration: none; /* Remove underline from links acting as buttons */
+            font-weight: 600; /* Semi-bold text */
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions for hover effects */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for buttons */
+        }
+        .btn:hover {
+            background-color: #5a64d3; /* Lighter indigo on hover */
+            transform: translateY(-2px); /* Slight lift effect on hover */
+        }
+        .social-icon-wrapper {
+            display: flex; /* Flexbox for centering icon within wrapper */
+            justify-content: center;
+            align-items: center;
+            width: 3.5rem; /* Fixed width for consistent icon size */
+            height: 3.5rem; /* Fixed height for consistent icon size */
+            border-radius: 50%; /* Make wrapper circular */
+            background-color: #e0e7ff; /* Light indigo background for icons */
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+        }
+        .social-icon-wrapper:hover {
+            background-color: #c7d2fe; /* Slightly darker light indigo on hover */
+            transform: scale(1.1); /* Enlarge icon on hover */
+        }
+        .social-icon {
+            font-size: 2rem; /* Larger icons for better visibility */
+            color: #4c51bf; /* Consistent with primary color */
+            transition: color 0.3s ease; /* Smooth color transition */
+        }
+        .social-icon-wrapper img {
+            width: 100%; /* Ensure image fills its container */
+            height: 100%;
+            object-fit: cover; /* Cover the area without distortion */
+            border-radius: 50%; /* Keep image circular if wrapper is circular */
+        }
+        iframe {
+            border-radius: 1rem; /* Rounded corners for iframes (map, gallery) */
+        }
+
+        /* Hero Section Specific Styling */
+        .hero-section {
+            /* Background image with a dark overlay for text readability */
+            /* Replaced placeholder with a suggested real image path */
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/hero-bg.jpg') no-repeat center center/cover; /* Assume 'images/hero-bg.jpg' exists or create it */
+            min-height: 450px; /* Minimum height for the hero section */
+            display: flex; /* Use flexbox for content centering */
+            align-items: center; /* Center content vertically */
+            justify-content: center; /* Center content horizontally */
+            color: white; /* White text for contrast against dark background */
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
+        }
+    </style>
 </head>
-<body>
-<div class="header" id="home">
-	<div class="header-top">
-		<div class="container">
-			<div class="w3l-social-icons">
-				<a class="social-icon social-icon-facebook" href="https://www.facebook.com/vishalbanquethall1/">
-					<i class="fa fa-facebook" aria-hidden="true"></i>
-				</a>
-				<a class="social-icon social-icon-twitter" href="#">
-					<i class="fa fa-twitter" aria-hidden="true"></i>
-				</a>
-				<a class="social-icon social-icon-google" href="#">
-					<i class="fa fa-google-plus" aria-hidden="true"></i>
-				</a>
-				<a class="social-icon social-icon-dribbble" href="#">
-					<i class="fa fa-dribbble" aria-hidden="true"></i>
-				</a>
-			</div>
-			<div class="w3l-social-icons">
-				<a class="phone" href="tel:+919875478411">
-					<i class="fa fa-phone" aria-hidden="true"></i>+91 9875478411
-				</a>
-				<a class="mail" href="mailto:info@example.com">
-					<i class="fa fa-envelope-o" aria-hidden="true"></i>info@example.com
-				</a>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-	</div>
-	<div class="header-bottom">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<div class="logo">
-					<h1><a href="index.html">Vishal Banquet Hall</a></h1>
-				</div>
-			</div>
-			<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
-				<nav class="cl-effect-15" id="cl-effect-15">
-					<ul>
-						<li class="active"><a href="index.html">Home</a></li>
-						<li><a href="#about" class="scroll">About</a></li>
-						<li><a href="#events" class="scroll">Events</a></li>
-						<li><a href="#gallery" class="scroll">Gallery</a></li>
-						<li><a href="#team" class="scroll">Team</a></li>
-						<li><a href="#contact" class="scroll">Contact</a></li>
-					</ul>
-				</nav>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="banner">
-	<div class="container">
-		<div class="flexslider">
-			<ul class="slides">
-				<li>
-					<div class="w3l-info">
-						<h2 class="w3l_head">Wedding and Party</h2>
-						<p>Quisque non leo sed nisl fermentum.</p>
-						<a href="#events" class="wthree-btn btn-6" >More</a>
-					</div>
-				</li>
-				<li>
-					<div class="w3l-info">
-						<h3 class="w3l_head">Catering Services</h3>
-						<p>Quisque non leo sed nisl fermentum.</p>
-						<a href="#events" class="wthree-btn btn-6" >More</a>
-					</div>
-				</li>
-				<li>
-					<div class="w3l-info">
-						<h3 class="w3l_head">Corporate Events</h3>
-						<p>Quisque non leo sed nisl fermentum.</p>
-						<a href="#events" class="wthree-btn btn-6" >More</a>
-					</div>
-				</li>
-			</ul>
-		</div>
-	</div>
-</div>
-<div class="about" id="about">
-	<div class="container">
-		<h3 class="w3l_head">Welcome To Our Hall</h3>
-		<p class="w3ls_head_p">What We Do</p>
-		<div class="w3l-about-grids">
-			<div class="col-md-6 w3l-about-left">
-				<div class="w3l-about-img">
-					<img src="images/ab1.jpg" alt="">
-				</div>
-			</div>
-			<div class="col-md-6 w3l-about-right">
-				<h4>Cras dapibus iaculis nisl, a dapibus leo.</h4>
-				<p>Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
-				<p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
-				<div class="w3l-about-two">
-					<a href="#contact" class="btn btn-default w3l-about-btn scroll">Contact Us</a>
-				</div>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-	</div>
-</div>
-<div class="services" id="events">
-	<div class="container">
-		<h3 class="w3l_head">Events and Services</h3>
-		<p class="w3ls_head_p">What We Offer</p>
-		<div class="w3l-service-grids">
-			<div class="col-md-4 w3l-service-grid">
-				<div class="w3l-service-img">
-					<img src="images/s1.jpg" alt="" />
-				</div>
-				<div class="w3l-service-info">
-					<h4>Wedding</h4>
-					<p>Quisque non leo sed nisl fermentum. Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
-				</div>
-			</div>
-			<div class="col-md-4 w3l-service-grid">
-				<div class="w3l-service-img">
-					<img src="images/s2.jpg" alt="" />
-				</div>
-				<div class="w3l-service-info">
-					<h4>Parties</h4>
-					<p>Quisque non leo sed nisl fermentum. Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
-				</div>
-			</div>
-			<div class="col-md-4 w3l-service-grid">
-				<div class="w3l-service-img">
-					<img src="images/s3.jpg" alt="" />
-				</div>
-				<div class="w3l-service-info">
-					<h4>Corporate</h4>
-					<p>Quisque non leo sed nisl fermentum. Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
-				</div>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-		<div class="w3l-service-grids">
-			<div class="col-md-4 w3l-service-grid">
-				<div class="w3l-service-img">
-					<img src="images/s4.jpg" alt="" />
-				</div>
-				<div class="w3l-service-info">
-					<h4>Birthday</h4>
-					<p>Quisque non leo sed nisl fermentum. Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
-				</div>
-			</div>
-			<div class="col-md-4 w3l-service-grid">
-				<div class="w3l-service-img">
-					<img src="images/s5.jpg" alt="" />
-				</div>
-				<div class="w3l-service-info">
-					<h4>Engagment</h4>
-					<p>Quisque non leo sed nisl fermentum. Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
-				</div>
-			</div>
-			<div class="col-md-4 w3l-service-grid">
-				<div class="w3l-service-img">
-					<img src="images/s6.jpg" alt="" />
-				</div>
-				<div class="w3l-service-info">
-					<h4>Catering</h4>
-					<p>Quisque non leo sed nisl fermentum. Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
-				</div>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-	</div>
-</div>
-<div class="gallery" id="gallery">
-	<div class="container">
-		<h3 class="w3l_head">Our Gallery</h3>
-		<p class="w3ls_head_p">What We Have</p>
-	</div>
-	<div class="gallery-grids">
-		<div class="gallery-grid">
-			<a class="example-image-link" href="images/1.jpg" data-lightbox="example-set" data-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus nulla quis nulla consequat, a interdum lacus aliquet. Nullam eget felis sem.">
-				<img src="images/1.jpg" alt="" />
-			</a>
-		</div>
-		<div class="gallery-grid">
-			<a class="example-image-link" href="images/2.jpg" data-lightbox="example-set" data-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus nulla quis nulla consequat, a interdum lacus aliquet. Nullam eget felis sem.">
-				<img src="images/2.jpg" alt="" />
-			</a>
-		</div>
-		<div class="gallery-grid">
-			<a class="example-image-link" href="images/3.jpg" data-lightbox="example-set" data-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus nulla quis nulla consequat, a interdum lacus aliquet. Nullam eget felis sem.">
-				<img src="images/3.jpg" alt="" />
-			</a>
-		</div>
-		<div class="gallery-grid">
-			<a class="example-image-link" href="images/4.jpg" data-lightbox="example-set" data-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus nulla quis nulla consequat, a interdum lacus aliquet. Nullam eget felis sem.">
-				<img src="images/4.jpg" alt="" />
-			</a>
-		</div>
-		<div class="gallery-grid">
-			<a class="example-image-link" href="images/5.jpg" data-lightbox="example-set" data-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus nulla quis nulla consequat, a interdum lacus aliquet. Nullam eget felis sem.">
-				<img src="images/5.jpg" alt="" />
-			</a>
-		</div>
-		<div class="gallery-grid">
-			<a class="example-image-link" href="images/6.jpg" data-lightbox="example-set" data-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus nulla quis nulla consequat, a interdum lacus aliquet. Nullam eget felis sem.">
-				<img src="images/6.jpg" alt="" />
-			</a>
-		</div>
-		<div class="gallery-grid">
-			<a class="example-image-link" href="images/7.jpg" data-lightbox="example-set" data-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus nulla quis nulla consequat, a interdum lacus aliquet. Nullam eget felis sem.">
-				<img src="images/7.jpg" alt="" />
-			</a>
-		</div>
-		<div class="gallery-grid">
-			<a class="example-image-link" href="images/8.jpg" data-lightbox="example-set" data-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus nulla quis nulla consequat, a interdum lacus aliquet. Nullam eget felis sem.">
-				<img src="images/8.jpg" alt="" />
-			</a>
-		</div>
-		<div class="clearfix"></div>
-	</div>
-</div>
-<div class="team" id="team">
-	<div class="container">
-		<h3 class="w3l_head">Our Team</h3>
-		<p class="w3ls_head_p">What We Have</p>
-		<div id="owl-demo" class="owl-carousel owl-theme">
-			<div class="item">
-				<div class="w3l-team-grid">
-					<img src="images/t1.jpg" alt=" " class="img-responsive" />
-					<div class="w3l-team-info">
-						<h4>Richard</h4>
-						<p>Manager</p>
-					</div>
-					<div class="w3l-social-icons">
-						<a class="social-icon social-icon-facebook" href="#">
-							<i class="fa fa-facebook" aria-hidden="true"></i>
-						</a>
-						<a class="social-icon social-icon-twitter" href="#">
-							<i class="fa fa-twitter" aria-hidden="true"></i>
-						</a>
-						<a class="social-icon social-icon-google" href="#">
-							<i class="fa fa-google-plus" aria-hidden="true"></i>
-						</a>
-						<a class="social-icon social-icon-dribbble" href="#">
-							<i class="fa fa-dribbble" aria-hidden="true"></i>
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="item">
-				<div class="w3l-team-grid">
-					<img src="images/t2.jpg" alt=" " class="img-responsive" />
-					<div class="w3l-team-info">
-						<h4>William</h4>
-						<p>Manager</p>
-					</div>
-					<div class="w3l-social-icons">
-						<a class="social-icon social-icon-facebook" href="#">
-							<i class="fa fa-facebook" aria-hidden="true"></i>
-						</a>
-						<a class="social-icon social-icon-twitter" href="#">
-							<i class="fa fa-twitter" aria-hidden="true"></i>
-						</a>
-						<a class="social-icon social-icon-google" href="#">
-							<i class="fa fa-google-plus" aria-hidden="true"></i>
-						</a>
-						<a class="social-icon social-icon-dribbble" href="#">
-							<i class="fa fa-dribbble" aria-hidden="true"></i>
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="item">
-				<div class="w3l-team-grid">
-					<img src="images/t3.jpg" alt=" " class="img-responsive" />
-					<div class="w3l-team-info">
-						<h4>Jessica</h4>
-						<p>Manager</p>
-					</div>
-					<div class="w3l-social-icons">
-						<a class="social-icon social-icon-facebook" href="#">
-							<i class="fa fa-facebook" aria-hidden="true"></i>
-						</a>
-						<a class="social-icon social-icon-twitter" href="#">
-							<i class="fa fa-twitter" aria-hidden="true"></i>
-						</a>
-						<a class="social-icon social-icon-google" href="#">
-							<i class="fa fa-google-plus" aria-hidden="true"></i>
-						</a>
-						<a class="social-icon social-icon-dribbble" href="#">
-							<i class="fa fa-dribbble" aria-hidden="true"></i>
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="item">
-				<div class="w3l-team-grid">
-					<img src="images/t4.jpg" alt=" " class="img-responsive" />
-					<div class="w3l-team-info">
-						<h4>Michael</h4>
-						<p>Manager</p>
-					</div>
-					<div class="w3l-social-icons">
-						<a class="social-icon social-icon-facebook" href="#">
-							<i class="fa fa-facebook" aria-hidden="true"></i>
-						</a>
-						<a class="social-icon social-icon-twitter" href="#">
-							<i class="fa fa-twitter" aria-hidden="true"></i>
-						</a>
-						<a class="social-icon social-icon-google" href="#">
-							<i class="fa fa-google-plus" aria-hidden="true"></i>
-						</a>
-						<a class="social-icon social-icon-dribbble" href="#">
-							<i class="fa fa-dribbble" aria-hidden="true"></i>
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="item">
-				<div class="w3l-team-grid">
-					<img src="images/t1.jpg" alt=" " class="img-responsive" />
-					<div class="w3l-team-info">
-						<h4>Richard</h4>
-						<p>Manager</p>
-					</div>
-					<div class="w3l-social-icons">
-						<a class="social-icon social-icon-facebook" href="#">
-							<i class="fa fa-facebook" aria-hidden="true"></i>
-						</a>
-						<a class="social-icon social-icon-twitter" href="#">
-							<i class="fa fa-twitter" aria-hidden="true"></i>
-						</a>
-						<a class="social-icon social-icon-google" href="#">
-							<i class="fa fa-google-plus" aria-hidden="true"></i>
-						</a>
-						<a class="social-icon social-icon-dribbble" href="#">
-							<i class="fa fa-dribbble" aria-hidden="true"></i>
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="item">
-				<div class="w3l-team-grid">
-					<img src="images/t2.jpg" alt=" " class="img-responsive" />
-					<div class="w3l-team-info">
-						<h4>William</h4>
-						<p>Manager</p>
-					</div>
-					<div class="w3l-social-icons">
-						<a class="social-icon social-icon-facebook" href="#">
-							<i class="fa fa-facebook" aria-hidden="true"></i>
-						</a>
-						<a class="social-icon social-icon-twitter" href="#">
-							<i class="fa fa-twitter" aria-hidden="true"></i>
-						</a>
-						<a class="social-icon social-icon-google" href="#">
-							<i class="fa fa-google-plus" aria-hidden="true"></i>
-						</a>
-						<a class="social-icon social-icon-dribbble" href="#">
-							<i class="fa fa-dribbble" aria-hidden="true"></i>
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="item">
-				<div class="w3l-team-grid">
-					<img src="images/t3.jpg" alt=" " class="img-responsive" />
-					<div class="w3l-team-info">
-						<h4>Jessica</h4>
-						<p>Manager</p>
-					</div>
-					<div class="w3l-social-icons">
-						<a class="social-icon social-icon-facebook" href="#">
-							<i class="fa fa-facebook" aria-hidden="true"></i>
-						</a>
-						<a class="social-icon social-icon-twitter" href="#">
-							<i class="fa fa-twitter" aria-hidden="true"></i>
-						</a>
-						<a class="social-icon social-icon-google" href="#">
-							<i class="fa fa-google-plus" aria-hidden="true"></i>
-						</a>
-						<a class="social-icon social-icon-dribbble" href="#">
-							<i class="fa fa-dribbble" aria-hidden="true"></i>
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="item">
-				<div class="w3l-team-grid">
-					<img src="images/t4.jpg" alt=" " class="img-responsive" />
-					<div class="w3l-team-info">
-						<h4>Michael</h4>
-						<p>Manager</p>
-					</div>
-					<div class="w3l-social-icons">
-						<a class="social-icon social-icon-facebook" href="#">
-							<i class="fa fa-facebook" aria-hidden="true"></i>
-						</a>
-						<a class="social-icon social-icon-twitter" href="#">
-							<i class="fa fa-twitter" aria-hidden="true"></i>
-						</a>
-						<a class="social-icon social-icon-google" href="#">
-							<i class="fa fa-google-plus" aria-hidden="true"></i>
-						</a>
-						<a class="social-icon social-icon-dribbble" href="#">
-							<i class="fa fa-dribbble" aria-hidden="true"></i>
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="item">
-				<div class="w3l-team-grid">
-					<img src="images/t1.jpg" alt=" " class="img-responsive" />
-					<div class="w3l-team-info">
-						<h4>Richard</h4>
-						<p>Manager</p>
-					</div>
-					<div class="w3l-social-icons">
-						<a class="social-icon social-icon-facebook" href="#">
-							<i class="fa fa-facebook" aria-hidden="true"></i>
-						</a>
-						<a class="social-icon social-icon-twitter" href="#">
-							<i class="fa fa-twitter" aria-hidden="true"></i>
-						</a>
-						<a class="social-icon social-icon-google" href="#">
-							<i class="fa fa-google-plus" aria-hidden="true"></i>
-						</a>
-						<a class="social-icon social-icon-dribbble" href="#">
-							<i class="fa fa-dribbble" aria-hidden="true"></i>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="contact" id="contact">
-	<div class="container">
-		<h3 class="w3l_head">Contact Us</h3>
-		<p class="w3ls_head_p">Get In Touch</p>
-		<div class="contact-grids">
-			<div class="col-md-5 contact-left">
-				<div class="address-grid">
-					<i class="glyphicon glyphicon-map-marker"></i>
-					<div class="address1">
-						<h3>Address</h3>
-						<p>New Delhi, India</p>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-				<div class="address-grid">
-					<i class="glyphicon glyphicon-earphone"></i>
-					<div class="address1">
-						<h3>Phone</h3>
-						<p>+91 9875478411</p>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-				<div class="address-grid">
-					<i class="glyphicon glyphicon-envelope"></i>
-					<div class="address1">
-						<h3>Email</h3>
-						<p><a href="mailto:info@example.com">info@example.com</a></p>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-				<div class="address-grid">
-					<i class="glyphicon glyphicon-time"></i>
-					<div class="address1">
-						<h3>Opening Hours</h3>
-						<p>Mon-Sun: 9:00 AM to 6:00 PM</p>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-			</div>
-			<div class="col-md-7 contact-right">
-				<form action="#" method="post">
-					<input type="text" name="name" placeholder="Name" required="">
-					<input class="email" type="text" name="email" placeholder="Email" required="">
-					<textarea placeholder="Message" name="message" required=""></textarea>
-					<input type="submit" value="Submit">
-				</form>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-	</div>
-</div>
-<div class="map">
-	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.71427181313!2d77.30799791456956!3d28.57799308244458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd2c55a3b7d1%3A0x6b4c106a72e816a1!2sVishal+Banquet+Hall!5e0!3m2!1sen!2sin!4v1491807490060" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>
-</div>
-<div class="footer">
-	<div class="container">
-		<div class="w3l-social-icons">
-			<a class="social-icon social-icon-facebook" href="https://www.facebook.com/vishalbanquethall1/">
-				<i class="fa fa-facebook" aria-hidden="true"></i>
-			</a>
-			<a class="social-icon social-icon-twitter" href="#">
-				<i class="fa fa-twitter" aria-hidden="true"></i>
-			</a>
-			<a class="social-icon social-icon-google" href="#">
-				<i class="fa fa-google-plus" aria-hidden="true"></i>
-			</a>
-			<a class="social-icon social-icon-dribbble" href="#">
-				<i class="fa fa-dribbble" aria-hidden="true"></i>
-			</a>
-		</div>
-		<div class="w3ls-footer-grids">
-			<div class="col-md-3 w3ls-footer-grid">
-				<h4>About Us</h4>
-				<p>Proin eget leo ac augue mattis viverra ut vel ante. Praesent quis augue ac massa tristique.</p>
-			</div>
-			<div class="col-md-3 w3ls-footer-grid">
-				<h4>Address</h4>
-				<p>New Delhi, India</p>
-			</div>
-			<div class="col-md-3 w3ls-footer-grid">
-				<h4>Contact Us</h4>
-				<p>+91 9875478411</p>
-				<p><a href="mailto:info@example.com">info@example.com</a></p>
-			</div>
-			<div class="col-md-3 w3ls-footer-grid">
-				<h4>Newsletter</h4>
-				<form action="#" method="post">
-					<input type="text" name="Email" placeholder="Email" required="">
-					<input type="submit" value="Submit">
-				</form>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-	</div>
-</div>
-<div class="copyright">
-	<div class="container">
-		<p> Â© 2017 Vishal Banquet Hall. All Rights Reserved | Design by <a href="http://w3layouts.com/"> W3layouts </a></p>
-	</div>
-</div>
-<script src="js/jquery.chocolat.js"></script>
-<script type="text/javascript">
-	$(function() {
-		$('.gallery-grid a').Chocolat();
-	});
-</script>
-<script src="js/owl.carousel.js"></script>
-<script>
-	$(document).ready(function() {
-		$("#owl-demo").owlCarousel ({
-			items : 4,
-			lazyLoad : true,
-			autoPlay : true,
-			navigation : true,
-			navigationText :  false,
-			pagination : false,
-		});
-	});
-</script>
+<body class="antialiased">
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Vishal Banquet Hall",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Gaya-Dobhi Rd, Musatpura",
+        "addressLocality": "Bodh Gaya",
+        "addressRegion": "Bihar",
+        "postalCode": "823004",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 24.7191958,
+        "longitude": 84.9683633
+      },
+      "url": "https://vishalbanquethall1.github.io/",
+      "telephone": "+919228105245",
+      "openingHours": "Mo-Su 09:00-22:00",
+      "image": "https://vishalbanquethall1.github.io/images/hero-bg.jpg",
+      "priceRange": "$$$",
+      "description": "Bodh Gaya's premier destination for hosting memorable events including weddings, corporate gatherings, and birthday celebrations. Ideal for hotel guests and large events.",
+      "knowsAbout": [
+        "Weddings", "Corporate Events", "Birthday Parties", "Social Gatherings", "Catering Services", "Event Decoration", "Hotel Banquet Hall", "Event Venue in Hotels"
+      ]
+    }
+    </script>
+    <header class="bg-indigo-800 py-4 text-center shadow-lg">
+        <a href="https://form.jotform.com/251493884642063" target="_blank" class="text-white text-xl font-semibold tracking-wide hover:underline px-4 py-2 rounded-lg transition-colors duration-300">
+            Click Here to Request a Quote & Book Your Event Today!
+        </a>
+    </header>
+
+    <div class="w-full">
+        <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=Vishal%20Banquet%20Hall%2C%20Gaya-Dobhi%20Rd%2C%20Musatpura%2C%20Bihar%20823004&z=15&output=embed" title="Vishal Banquet Hall Location Map">
+            <a href="https://www.gps.ie/collections/sports-gps/">Football GPS</a>
+        </iframe>
+    </div>
+
+    <div class="text-center mt-6 mb-10">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Vishal+Banquet+Hall,+Gaya-Dobhi+Rd,+Musatpura,+Bihar+823004" target="_blank" class="btn text-xl font-semibold bg-green-600 hover:bg-green-700">
+            Get Directions from Your Location
+        </a>
+    </div>
+
+    <div class="container bg-gray-50 p-8 rounded-2xl shadow-xl my-10">
+
+        <section class="hero-section rounded-2xl mb-10 shadow-lg">
+            <div class="text-center px-4">
+                <h1 class="text-6xl font-extrabold mb-4 leading-tight">Vishal Banquet Hall</h1>
+                <p class="text-2xl opacity-90 max-w-2xl mx-auto">Where Unforgettable Moments Begin in Bodh Gaya</p>
+                <a href="https://form.jotform.com/251493884642063" target="_blank" class="btn mt-8 bg-pink-600 hover:bg-pink-700">
+                    Plan Your Event
+                </a>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2 class="section-title">About Vishal Banquet Hall in Bodh Gaya</h2>
+            <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                Vishal Banquet Hall is Bodh Gaya's premier destination for hosting memorable events.
+                Strategically located on Gaya-Dobhi Rd in Musatpura, our modern and elegantly designed hall
+                provides the perfect backdrop for weddings, grand receptions, sophisticated corporate gatherings,
+                joyful birthday celebrations, and all types of special occasions. We pride ourselves on offering
+                impeccable service, state-of-the-art facilities, and a dedicated team committed to making your event
+                a seamless and extraordinary success. If you're looking for the best
+                <span class="font-semibold text-indigo-700">event venue in Bodh Gaya</span> or a
+                <span class="font-semibold text-indigo-700">wedding hall in Musatpura</span>, Vishal Banquet Hall is your ideal choice.
+                Our facilities and services are comparable to those found in top hotel venues, making us an excellent choice for guests staying in nearby hotels.
+            </p>
+            <div class="mt-6">
+                <h3 class="font-bold text-xl text-indigo-700 mb-4">Listen to Our Story</h3>
+                <audio controls src="https://github.com/vishalbanquethall1/vishalbanquethall1.github.io/blob/4948d7bad60ad6620e4565d6909a6be64832049d/%E0%A4%AC%E0%A5%8B%E0%A4%A7%E0%A4%97%E0%A4%AF%E0%A4%BE_%E0%A4%95%E0%A4%BE_%E0%A4%B5%E0%A4%BF%E0%A4%B6%E0%A4%BE%E0%A4%B2_%E0%A4%AC%E0%A5%88%E0%A4%82%E0%A4%95%E0%A5%8D%E0%A4%B5%E0%A5%87%E0%A4%9F_%E0%A4%B9%E0%A5%89%E0%A4%B2__%E0%A4%B8%E0%A5%81%E0%A4%B5%E0%A4%BF%E0%A4%A7%E0%A4%BE%E0%A4%8F%E0%A4%82%2C_%E0%A4%A6%E0%A4%BE%E0%A4%B5%E0%A5%87_%E0%A4%94%E0%A4%B0_%E0%A4%8F%E0%A4%95_%E0%A4%85%E0%A4%A8%E0%A4%B8%E0%A5%81%E0%A4%B2%E0%A4%9D%E0%A4%BE_%E0%A4%B0%E0%A4%B9%E0%A4%B8%E0%A5%8D%E0%A4%AF.m4a" class="w-full"></audio>
+            </div>
+            <p class="text-md text-gray-600 mt-6">
+                Find us easily at <span class="font-semibold">Gaya-Dobhi Rd, Musatpura, Bodh Gaya, Bihar 823004</span>
+                (Coordinates: 24.7191958, 84.9683633). We look forward to welcoming you!
+            </p>
+        </section>
+
+        <section class="card">
+            <h2 class="section-title">Our Services for Your Event</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+                <div class="p-6 bg-indigo-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <i class="fas fa-ring text-5xl text-indigo-700 mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2 text-gray-800">Weddings & Receptions</h3>
+                    <p class="text-gray-600">Elegant settings and comprehensive support for your special day.</p>
+                </div>
+                <div class="p-6 bg-indigo-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <i class="fas fa-briefcase text-5xl text-indigo-700 mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2 text-gray-800">Corporate Events</h3>
+                    <p class="text-gray-600">Professional environment for conferences, seminars, and meetings.</p>
+                </div>
+                <div class="p-6 bg-indigo-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <i class="fas fa-birthday-cake text-5xl text-indigo-700 mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2 text-gray-800">Birthday Parties</h3>
+                    <p class="text-gray-600">Joyful celebrations with customizable themes and delicious food.</p>
+                </div>
+                <div class="p-6 bg-indigo-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <i class="fas fa-glass-cheers text-5xl text-indigo-700 mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2 text-gray-800">Social Gatherings</h3>
+                    <p class="text-gray-600">Any special occasion, from anniversaries to family reunions.</p>
+                </div>
+                <div class="p-6 bg-indigo-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <i class="fas fa-utensils text-5xl text-indigo-700 mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2 text-gray-800">Catering Services</h3>
+                    <p class="text-gray-600">Exquisite culinary experiences tailored to your taste.</p>
+                </div>
+                <div class="p-6 bg-indigo-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <i class="fas fa-palette text-5xl text-indigo-700 mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2 text-gray-800">Event Decoration</h3>
+                    <p class="text-gray-600">Transforming spaces to match your vision and theme.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2 class="section-title">Our Modern Facilities at Bodh Gaya</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-lg text-gray-700">
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-expand-alt text-2xl text-green-600"></i>
+                    <span>Spacious Hall</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-snowflake text-2xl text-blue-600"></i>
+                    <span>Fully Air-Conditioned</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-car text-2xl text-gray-600"></i>
+                    <span>Ample Parking</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-volume-up text-2xl text-red-600"></i>
+                    <span>Advanced Sound System</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-wifi text-2xl text-purple-600"></i>
+                    <span>High-Speed Wi-Fi</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-chair text-2xl text-yellow-600"></i>
+                    <span>Elegant Seating Arrangements</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2 class="section-title">Our Event Gallery</h2>
+            <div class="flex justify-center items-center flex-col">
+                <p class="text-lg text-gray-700 mb-6 text-center">Explore moments captured at Vishal Banquet Hall:</p>
+                <div class="w-full flex justify-center overflow-hidden rounded-xl shadow-lg">
+                    <a data-flickr-embed="true" data-header="true" data-footer="true" href="https://www.flickr.com/photos/202878976@N03/54606014869" title="Vishal Banquet Hall Photo 54606014869" aria-label="Flickr Photo 54606014869">
+                        <img src="https://live.staticflickr.com/65535/54606014869_80c636539c_c.jpg" width="1024" height="768" alt="Beautifully decorated Vishal Banquet Hall interior for events" loading="lazy">
+                    </a>
+                </div>
+                <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+                <p class="mt-6 text-gray-600 text-base text-center">
+                    <a href="https://www.flickr.com/photos/202878976@N03" target="_blank" class="text-blue-600 hover:underline font-medium">View more photos on Flickr</a>
+                </p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2 class="section-title">What Our Clients Say About Us</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <p class="italic text-gray-700 mb-4">"Vishal Banquet Hall provided an exceptional experience for our wedding reception. The staff was incredibly supportive, and the venue looked absolutely stunning!"</p>
+                    <p class="font-semibold text-gray-800">- R. Sharma, Happy Couple</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <p class="italic text-gray-700 mb-4">"We hosted our annual corporate conference here, and everything was perfectly managed. The facilities are top-notch, and the catering was superb."</p>
+                    <p class="font-semibold text-gray-800">- A. Kumar, Corporate Client</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2 class="section-title">Get In Touch With Vishal Banquet Hall</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-lg text-gray-700">
+                <div>
+                    <p class="mb-3"><span class="font-semibold text-gray-800">Mobile:</span> <a href="tel:+919228105245" class="text-blue-600 hover:underline">9228105245</a></p>
+                    <p class="mb-3"><span class="font-semibold">Email:</span> <a href="mailto:vishalhospital@hotmail.co.in" class="text-blue-600 hover:underline">
+                        <span class="js-email-obfuscate" data-user="vishalhospital" data-domain="hotmail.co.in"></span>
+                    </a></p>
+                    <p class="mb-3"><span class="font-semibold">Official Website:</span> <a href="https://vishalbanquethall1.github.io/" target="_blank" class="text-blue-600 hover:underline">vishalbanquethall1.github.io</a></p>
+                </div>
+                <div>
+                    <p class="mb-3"><span class="font-semibold">Scan to Review Us:</span> <a href="https://jsdl.in/RSL-PMD1748682945" target="_blank" class="text-blue-600 hover:underline">Leave a Review Here</a></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2 class="section-title">Connect With Us</h2>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="https://www.wedmegood.com/wedding-venues/Vishal-Banquet-Hall-25850959" target="_blank" aria-label="WedMeGood" class="social-icon-wrapper">
+                    <img src="https://placehold.co/40x40/FF69B4/ffffff?text=WMG" alt="WedMeGood icon" class="rounded-full w-10 h-10">
+                </a>
+                <a href="https://retreat.guru/centers/9199-1/vishal-banquet-hall" target="_blank" aria-label="Retreat Guru" class="social-icon-wrapper">
+                    <img src="https://placehold.co/40x40/8A2BE2/ffffff?text=RG" alt="Retreat Guru icon" class="rounded-full w-10 h-10">
+                </a>
+                <a href="https://www.justdial.com/Gaya/Vishal-Marriage-Hall-Musatpura/9999PX631-X631-240529000934-N4S9_BZDET" target="_blank" aria-label="Justdial" class="social-icon-wrapper">
+                    <img src="https://placehold.co/40x40/FF7F50/ffffff?text=JD" alt="Justdial icon" class="rounded-full w-10 h-10">
+                </a>
+                <a href="https://www.exportersindia.com/vishal-banquet-hall-gaya/" target="_blank" aria-label="Exporters India" class="social-icon-wrapper">
+                    <img src="https://placehold.co/40x40/008080/ffffff?text=EI" alt="Exporters India icon" class="rounded-full w-10 h-10">
+                </a>
+                <a href="https://www.facebook.com/share/1BLptjfrcY/?mibextid=wwXIfr" target="_blank" aria-label="Facebook" class="social-icon-wrapper">
+                    <i class="fab fa-facebook-f social-icon"></i>
+                </a>
+                <a href="https://www.instagram.com/vishalbanquethall?igsh=MTVtenQyMjB5b2c5dQ%3D%3D&utm_source=qr" target="_blank" aria-label="Instagram" class="social-icon-wrapper">
+                    <i class="fab fa-instagram social-icon"></i>
+                </a>
+                <a href="https://www.youtube.com/@VishalBanquetHallBodhGaya" target="_blank" aria-label="YouTube Channel" class="social-icon-wrapper">
+                    <i class="fab fa-youtube social-icon"></i>
+                </a>
+                <a href="https://snapchat.com/t/wWMY5YJB" target="_blank" aria-label="Snapchat" class="social-icon-wrapper">
+                    <i class="fab fa-snapchat-ghost social-icon"></i>
+                </a>
+                <a href="https://x.com/vishalbanquet1?s=21" target="_blank" aria-label="X (Twitter)" class="social-icon-wrapper">
+                    <i class="fab fa-x-twitter social-icon"></i>
+                </a>
+                <a href="https://pin.it/6KuEqjBJj" target="_blank" aria-label="Pinterest" class="social-icon-wrapper">
+                    <i class="fab fa-pinterest-p social-icon"></i>
+                </a>
+                <a href="https://www.threads.com/@vishalbanquethall?invite=0" target="_blank" aria-label="Threads" class="social-icon-wrapper">
+                    <i class="fab fa-threads social-icon"></i>
+                </a>
+                <a href="https://www.tumblr.com/vishalbanquethall" target="_blank" aria-label="Tumblr" class="social-icon-wrapper">
+                    <i class="fab fa-tumblr social-icon"></i>
+                </a>
+                <a href="https://www.reddit.com/user/vishalbanquethall/" target="_blank" aria-label="Reddit Profile" class="social-icon-wrapper">
+                    <i class="fab fa-reddit-alien social-icon"></i>
+                </a>
+                <a href="https://discord.gg/puGxuz3C" target="_blank" aria-label="Discord" class="social-icon-wrapper">
+                    <i class="fab fa-discord social-icon"></i>
+                </a>
+                <a href="https://s.channelcom.tech/BfM5by" target="_blank" aria-label="IMO" class="social-icon-wrapper">
+                    <img src="https://placehold.co/40x40/007bff/ffffff?text=IMO" alt="IMO icon" class="rounded-full w-10 h-10">
+                </a>
+                <a href="https://app.parler.com/vishalbanquethallbihar1" target="_blank" aria-label="Parler" class="social-icon-wrapper">
+                    <img src="https://placehold.co/40x40/FF4500/ffffff?text=PR" alt="Parler icon" class="rounded-full w-10 h-10">
+                </a>
+                <a href="https://www.abillion.com/fr/posts/68675d82faafe31e51cd7250" target="_blank" aria-label="Abillion Post" class="social-icon-wrapper">
+                    <img src="https://placehold.co/40x40/32CD32/ffffff?text=AB" alt="Abillion icon" class="rounded-full w-10 h-10">
+                </a>
+                <a href="https://bsky.app/profile/vishalbanquethall.bsky.social" target="_blank" aria-label="Bluesky" class="social-icon-wrapper">
+                    <img src="https://placehold.co/40x40/007FFF/ffffff?text=BS" alt="Bluesky icon" class="rounded-full w-10 h-10">
+                </a>
+                <a href="https://mewe.com/vishalbanquethall.53" target="_blank" aria-label="MeWe" class="social-icon-wrapper">
+                    <img src="https://placehold.co/40x40/6A5ACD/ffffff?text=MW" alt="MeWe icon" class="rounded-full w-10 h-10">
+                </a>
+                <a href="https://playstatus.gg/s/rNOxwyWsu1" target="_blank" aria-label="Playstatus" class="social-icon-wrapper">
+                    <img src="https://placehold.co/40x40/800080/ffffff?text=PS" alt="Playstatus icon" class="rounded-full w-10 h-10">
+                </a>
+                <a href="https://www.minds.com/vishalbanquethall" target="_blank" aria-label="Minds" class="social-icon-wrapper">
+                    <img src="https://placehold.co/40x40/FFD700/000000?text=MI" alt="Minds icon" class="rounded-full w-10 h-10">
+                </a>
+                <a href="https://explurger.com/pf/swfxkv9mkbqinbxgd" target="_blank" aria-label="Explurger" class="social-icon-wrapper">
+                    <img src="https://placehold.co/40x40/34D399/ffffff?text=Ex" alt="Explurger icon" class="rounded-full w-10 h-10">
+                </a>
+                <a href="https://vimeo.com/1098403183" target="_blank" aria-label="Vimeo 1098403183" class="social-icon-wrapper">
+                    <i class="fab fa-vimeo-v social-icon"></i>
+                </a>
+                <a href="https://in.linkedin.com/in/vishal-banquet-hall-603498373" target="_blank" aria-label="LinkedIn (Vishal Banquet Hall)" class="social-icon-wrapper">
+                    <i class="fab fa-linkedin-in social-icon"></i>
+                </a>
+                <a href="https://www.clubhouse.com/room/4dVSX6L5QYUyw07g:cgGl9Rz91dVcVPPmMYKCIssRh5OsvpVtv_3ZBNcANS8?utm_medium=ch_instant_invite&utm_campaign=uBq--bt98b9IFK_VN7z-Sg-1847653&chs=DwZtEKj8W%3AW53IiTdnZHYmToPJ8vjNsCu4A51kNnSOnxg8VyzF3-s" target="_blank" aria-label="Clubhouse" class="social-icon-wrapper">
+                    <img src="https://placehold.co/40x40/FF69B4/ffffff?text=CH" alt="Clubhouse icon" class="rounded-full w-10 h-10">
+                </a>
+                <a href="https://mojapp.in/@vishalbanquethallbihar?referrer=iOS&h=UqHQzgi-Jf9O0x" target="_blank" aria-label="Moj" class="social-icon-wrapper">
+                    <img src="https://placehold.co/40x40/FF0000/ffffff?text=MJ" alt="Moj icon" class="rounded-full w-10 h-10">
+                </a>
+                <a href="https://substack.com/@vishalbanquethall?r=601535&utm_medium=ios&utm_source=profile" target="_blank" aria-label="Substack" class="social-icon-wrapper">
+                    <img src="https://placehold.co/40x40/FF6719/ffffff?text=SS" alt="Substack icon" class="rounded-full w-10 h-10">
+                </a>
+                <a href="https://t.me/vishalbanquethall" target="_blank" aria-label="Telegram" class="social-icon-wrapper">
+                    <i class="fab fa-telegram-plane social-icon"></i>
+                </a>
+                <a href="https://chat.google.com/room/AAQA5IWdHqM?cls=6" target="_blank" aria-label="Google Chat" class="social-icon-wrapper">
+                    <img src="https://placehold.co/40x40/4285F4/ffffff?text=GC" alt="Google Chat icon" class="rounded-full w-10 h-10">
+                </a>
+                <a href="https://calendly.com/vishalbanquethallbihar/30min" target="_blank" aria-label="Calendly" class="social-icon-wrapper">
+                    <img src="https://placehold.co/40x40/00698F/ffffff?text=CL" alt="Calendly icon" class="rounded-full w-10 h-10">
+                </a>
+                <a href="https://about.me/vishalbanquethall/edit/emailsignature" target="_blank" aria-label="About.me" class="social-icon-wrapper">
+                    <img src="https://placehold.co/40x40/000000/ffffff?text=AM" alt="About.me icon" class="rounded-full w-10 h-10">
+                </a>
+                <a href="https://www.zazzle.com/mbr/238248389474460693" target="_blank" aria-label="Zazzle" class="social-icon-wrapper">
+                    <img src="https://placehold.co/40x40/8B008B/ffffff?text=ZZ" alt="Zazzle icon" class="rounded-full w-10 h-10">
+                </a>
+                <a href="https://share.myjosh.in/profile/538dcf0b-4688-492f-884c-1290a98d4d59?u=0x58d2d4a53f59521e" target="_blank" aria-label="Josh" class="social-icon-wrapper">
+                    <img src="https://placehold.co/40x40/FF4500/ffffff?text=JH" alt="Josh icon" class="rounded-full w-10 h-10">
+                </a>
+                <a href="https://m.myjosh.in/6OaT/32e07bf" target="_blank" aria-label="Download Josh" class="social-icon-wrapper">
+                    <img src="https://placehold.co/40x40/FF4500/ffffff?text=DJ" alt="Download Josh icon" class="rounded-full w-10 h-10">
+                </a>
+                <a href="https://www.hipi.co.in/@vishalbanquethall?utm_source=ios&utm_medium=my_profile&utm_campaign=hipi_shared_link" target="_blank" aria-label="Hipi" class="social-icon-wrapper">
+                    <img src="https://placehold.co/40x40/FF007F/ffffff?text=HP" alt="Hipi icon" class="rounded-full w-10 h-10">
+                </a>
+                <a href="https://apps.apple.com/ae/app/chingari/id1526811171" target="_blank" aria-label="Chingari" class="social-icon-wrapper">
+                    <img src="https://placehold.co/40x40/FFD700/000000?text=CG" alt="Chingari icon" class="rounded-full w-10 h-10">
+                </a>
+                <a href="https://share.vshots.live/DoXRj" target="_blank" aria-label="VShots Live" class="social-icon-wrapper">
+                    <img src="https://placehold.co/40x40/FF6347/ffffff?text=VS" alt="VShots Live icon" class="rounded-full w-10 h-10">
+                </a>
+                <a href="https://strava.app.link/pCnan9A1TUb" target="_blank" aria-label="Strava 1" class="social-icon-wrapper">
+                    <i class="fab fa-strava social-icon"></i>
+                </a>
+                <a href="https://strava.app.link/Galar5D1TUb" target="_blank" aria-label="Strava 2" class="social-icon-wrapper">
+                    <i class="fab fa-strava social-icon"></i>
+                </a>
+                <a href="https://triller.co/@vishalbanquethall" target="_blank" aria-label="Triller" class="social-icon-wrapper">
+                    <img src="https://placehold.co/40x40/FF0000/ffffff?text=TR" alt="Triller icon" class="rounded-full w-10 h-10">
+                </a>
+                <a href="https://www.behance.net/vishalsinha16" target="_blank" aria-label="Behance" class="social-icon-wrapper">
+                    <i class="fab fa-behance social-icon"></i>
+                </a>
+                <a href="https://fanbase.app.link/sp66znO8TUb" target="_blank" aria-label="Fanbase 3" class="social-icon-wrapper">
+                    <img src="https://placehold.co/40x40/4a4a4a/ffffff?text=FB3" alt="Fanbase icon" class="rounded-full w-10 h-10">
+                </a>
+                <a href="https://www.hotfrog.in/company/b6e7c277e9d2860152a4a0fb58d87431" target="_blank" aria-label="Hotfrog" class="social-icon-wrapper">
+                    <img src="https://placehold.co/40x40/FFA500/ffffff?text=HF" alt="Hotfrog icon" class="rounded-full w-10 h-10">
+                </a>
+                <a href="https://www.flickr.com/photos/202878976@N03/54606014869" target="_blank" aria-label="Flickr Photo 54606014869" class="social-icon-wrapper">
+                    <i class="fab fa-flickr social-icon"></i>
+                </a>
+            </div>
+            <p class="mt-8 text-center text-gray-700 text-lg">Follow us on social media for updates and more!</p>
+        </section>
+
+        <section class="card">
+            <h2 class="section-title">Additional Contact Information</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-lg text-gray-700">
+
+                <div>
+                    <h3 class="font-bold text-xl text-indigo-700 mb-3">Vishal Hospital (Rajkot)</h3>
+                    <p class="mb-2"><span class="font-semibold">Address:</span> Vishal Hospital, Kailashwadi Main Road, opposite Taluka Polish Choki, Junction Plot, Rajkot, Gujarat 360001</p>
+                    <p class="mb-2"><span class="font-semibold">Mobile:</span> <a href="tel:+919228105245" class="text-blue-600 hover:underline">9228105245</a></p>
+                    <p class="mb-2"><span class="font-semibold">Landline:</span> <a href="tel:02812450408" class="text-blue-600 hover:underline">0281-2450408</a></p>
+                    <p class="mb-2"><span class="font-semibold">Website:</span> <a href="https://vishalhospitalrajkot.github.io/" target="_blank" class="text-blue-600 hover:underline">vishalhospitalrajkot.github.io</a></p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-xl text-indigo-700 mb-3">Vishal Banquet Hall (Bodh Gaya)</h3>
+                    <p class="mb-2"><span class="font-semibold">Address:</span> Vishal Banquet Hall, Gaya-Dobhi Rd, Musatpura, Bihar 823004</p>
+                    <p class="mb-2"><span class="font-semibold">Mobile:</span> <a href="tel:+919228105245" class="text-blue-600 hover:underline">9228105245</a></p>
+                    <p class="mb-2"><span class="font-semibold">Website:</span> <a href="https://vishalbanquethall1.github.io/" target="_blank" class="text-blue-600 hover:underline">vishalbanquethall1.github.io</a></p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-xl text-indigo-700 mb-3">Vishal Hospital (Bodh Gaya)</h3>
+                    <p class="mb-2"><span class="font-semibold">Address:</span> Vishal Hospital, Gaya-Dobhi Rd, Musatpura, Bihar 823004</p>
+                    <p class="mb-2"><span class="font-semibold">Mobile:</span> <a href="tel:+919228105245" class="text-blue-600 hover:underline">9228105245</a></p>
+                    <p class="mb-2"><span class="font-semibold">Website:</span> <a href="https://vishalhospitalrajkot.github.io/vishalhospitalbodhgaya/" target="_blank" class="text-blue-600 hover:underline">vishalhospitalrajkot.github.io/vishalhospitalbodhgaya</a></p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-xl text-indigo-700 mb-3">Dr. Anoop Lal Sinha</h3>
+                    <p class="mb-2"><span class="font-semibold">Mobile:</span> <a href="tel:+919228105245" class="text-blue-600 hover:underline">9228105245</a></p>
+                    <p class="mb-2"><span class="font-semibold">Website:</span> <a href="https://vishalhospitalrajkot.github.io/Dr.AnoopLalSinha/" target="_blank" class="text-blue-600 hover:underline">vishalhospitalrajkot.github.io/Dr.AnoopLalSinha</a></p>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="bg-gray-900 text-white text-center py-8 mt-10 rounded-t-2xl shadow-inner">
+        <p class="mb-2">© 2024 Vishal Banquet Hall. All rights reserved.</p>
+        <p class="text-sm">Located at: Gaya-Dobhi Rd, Musatpura, Bodh Gaya, Bihar 823004</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const emailSpans = document.querySelectorAll('.js-email-obfuscate');
+            emailSpans.forEach(span => {
+                const user = span.dataset.user;
+                const domain = span.dataset.domain;
+                if (user && domain) {
+                    const email = `${user}@${domain}`;
+                    span.textContent = email;
+                }
+            });
+        });
+    </script>
 </body>
 </html>
